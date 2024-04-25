@@ -1,22 +1,26 @@
 
-	Value
+	Self Other
 
-	Result
+	Indexer Counter
 
-	Item
-	
-	Entry
+	Ordinal Counter
 
-	Inflect
+	Error Counter
 
-	Deflect
+	Erlet Counter
 
-	Reflect
+	Inflect Deflect	Reflect
 
-	Number
+	Value Result Item Entry
 
-	Numeric
+	Inclusive Nullable Indexer INI
 
-	Numeral
+	Exclusive Normalize Ordinal ENO
+
+	Number Numeric Numeral
 
 	One First Primary Single
+
+	Two Second Secondary Double
+
+	Three Third Tertiary Triple
