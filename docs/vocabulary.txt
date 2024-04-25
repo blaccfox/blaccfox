@@ -1,26 +1,66 @@
 
-	Self Other
+	Reference Type:
 
-	Indexer Counter
+		Self (new X())
 
-	Ordinal Counter
+		Other (X as Y)
 
-	Error Counter
+	Counter Type:
 
-	Erlet Counter
+		Indexer (Starts from 0)
 
-	Inflect Deflect	Reflect
+ 		Ordinal (Starts from 1)
 
-	Value Result Item Entry
+		Error (Starts from -1)
 
-	Inclusive Nullable Indexer INI
+		Erlet (Counts in parallel)
 
-	Exclusive Normalize Ordinal ENO
+	Box Type:
 
-	Number Numeric Numeral
+		Inflect 
 
-	One First Primary Single
+		Deflect	(IEnumerable[])
+		
+		Reflect (Y)(X as Object)
 
-	Two Second Secondary Double
+	Plain Type:
 
-	Three Third Tertiary Triple
+		Value Result
+	
+		Item Entry
+
+		Array List
+
+	Physical Type:
+
+		Inclusive Nullable Indexer (INI)
+
+		Exclusive Normalize Ordinal (ENO)
+
+	Virtual Type:
+
+		Number Numeric Numeral
+
+	Hierarchical Type:
+
+		Nillity		- Zero Zeroth Void Null
+
+		Singularity	- One First Primary Single
+
+		Duality		- Two Second Secondary Double
+
+		Trinity		- Three Third Tertiary Triple
+
+		Quadrality	- Four Fouth Quaternary Quadruple
+
+		Quintality	- Five Fifth Quinary Quintuple
+
+		Sextality	- Six Sixth Senary Sextuple
+
+		Septality	- Seven Seventh Septenary Septuple
+
+		Octality	- Eight Eighth Octonary Octuple
+
+		Nonality 	- Nine Ninth Nonary Nonauple
+
+		Decality	- Ten Tenth Denary Decuple
