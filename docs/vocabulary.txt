@@ -1,27 +1,31 @@
 
 	Reference Type:
 
-		Self (new X())
+		Self
 
-		Other (X as Y)
+		Other
+
+		Element
+
+		Register
 
 	Counter Type:
 
-		Indexer (Starts from 0)
+		Indexer
 
- 		Ordinal (Starts from 1)
+ 		Ordinal
 
-		Error (Starts from -1)
+		Error
 
-		Erlet (Counts in parallel)
+		Erlet
 
 	Box Type:
 
 		Inflect 
 
-		Deflect	(IEnumerable[])
+		Deflect
 		
-		Reflect (Y)(X as Object)
+		Reflect
 
 	Plain Type:
 
