@@ -6,6 +6,16 @@
 		<link rel="icon" href="docs/icon/icon.png" type="image/x-icon">
 
 		<meta http-equiv="Cache Control" content="max-age=0">
+
+		<style>
+			#onefirstprimarysingle iframe {
+				height: 128px;
+			}
+
+			#twosecondsecondarydouble iframe {
+				height: 256px;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -68,46 +78,15 @@
 
 			<br>
 			
-			<iframe src="root/root-cpp/index.html"></iframe>
+			<div id="onefirstprimarysingle">
+				<iframe src="root/root-cpp/index.html"></iframe>
+				<iframe src="root/root-csharp/index.html"></iframe>	
+			</div>
 
-			<iframe src="root/root-csharp/index.html"></iframe>
-			
-			<div>
+			<br>	
 
-				<h5>Japanese</h5>
-
-				<ul>
-					<li>
-						<a>Dakuon</a>
-					</li>
-					<li>
-						<a>Handakuon</a>
-					</li>
-					<li>
-						<a>Yoon</a>
-					</li>
-					<li>
-						<a>Sokuon</a>
-					</li>
-					<li>
-						<a>Long Vowels</a>
-					</li>
-					<li>
-						<a href="docs/docs-hiragana/docs-hiragana.txt">Hiragana</a>
-					</li>
-					<li>
-						<a>Katakana</a>
-					</li>
-					<li>
-						<a>Kanji</a>
-					</li>
-					<li>
-						<a>Particle</a>
-					</li>
-					<li>
-						<a>Capula</a>
-					</li>
-				</ul>
+			<div id="twosecondsecondarydouble">
+				<iframe src="root/root-japanese/index.html"></iframe>
 			</div>
 
 			<div>
