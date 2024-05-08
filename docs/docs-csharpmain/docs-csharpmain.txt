@@ -1,24 +1,44 @@
 
-	using Core;
+    using Core;
 
-	namespace Core 
-	{
-		using System;
+    namespace Core
+    {
+        using System;
 
-		internal static class Program 
-		{
-			static Program()
-			{
-				return;
-			}
+        using System.Collections;
 
-			internal static String[] SetArgument;
+        internal static class Program
+        {
+            internal static Object SetArgumentArrayList;
 
-			internal static void Main(params String[] Argument_ARRAY)
- 			{
-				SetArgument = Argument_ARRAY;
+            static Program()
+            {
+                SetArgumentArrayList = new ArrayList();
 
-				return;
-			}
-		}
-	}
+                return;
+            }
+
+            internal static void Main(params String[] Argument_ARRAY)
+            {
+                var reflect = (ArrayList)(SetArgumentArrayList as Object);
+
+                var list = reflect;
+
+                foreach (String stringValue in Argument_ARRAY)
+                {
+                    list.Add(stringValue);
+
+                    continue;
+                }
+
+                foreach (String stringValue in list)
+                {
+                    Console.Out.WriteLine(stringValue);
+
+                    continue;
+                }
+
+                return;
+            }
+        }
+    }
