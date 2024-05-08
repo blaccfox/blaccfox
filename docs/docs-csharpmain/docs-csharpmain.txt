@@ -31,9 +31,15 @@
                     continue;
                 }
 
+                var ordinal = 1;
+
                 foreach (String stringValue in list)
                 {
-                    Console.Out.WriteLine(stringValue);
+                    var value = String.Format("{0}: {1}", ordinal, stringValue);
+
+                    Console.Out.WriteLine(value);
+
+                    ordinal = ordinal + 1;
 
                     continue;
                 }
