@@ -1,5 +1,49 @@
 
-	int main() {
+    #include <iostream>
 
-		return 0;
-	}
+    using namespace std;
+
+    int main(int VALUE__ArgumentCount, char* ARRAY__ArgumentVector[], char** LIST__ArgumentVector)
+    {
+        int* resultInteger = nullptr;
+
+        cout << "Hello World" << endl;
+
+        int i, j;
+
+        i = 0;
+
+        j = -1;
+
+        for (;;) 
+        {
+            j = (i + 1);
+
+            bool isEqualAbcdCheck, shouldBreakAbcdCheck;
+
+            isEqualAbcdCheck = VALUE__ArgumentCount == i;
+
+            shouldBreakAbcdCheck = isEqualAbcdCheck == true;
+
+            if (shouldBreakAbcdCheck == true)
+            {
+                break;
+            }
+
+            cout << j << ARRAY__ArgumentVector[i] << endl;
+
+            cout << j << LIST__ArgumentVector[i] << endl;
+
+            i = i + 1;
+
+            continue;
+        }
+
+        int valueInteger;
+
+        valueInteger = 0;
+
+        resultInteger = &valueInteger;
+
+        return *resultInteger;
+    }
