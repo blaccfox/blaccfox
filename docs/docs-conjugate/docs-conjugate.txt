@@ -9,6 +9,14 @@
 
 		彼ら　を　すろ　。
 
+		Formal Conjugation Positive
+
+		彼　を　します　。
+
+		Formal Conjugation Negative
+
+		彼女　を　しません　。
+
 		Hypothetical Conjugation Plain
 
 		彼　を　すれば、　そして、　いい　です　。
