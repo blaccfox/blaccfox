@@ -3,71 +3,49 @@
 
     #include <Windows.h>
 
-    #include <iostream>
+    static LPCWSTR ClassNameElement;
 
-    using namespace std;
+    static LRESULT CALLBACK WindowProc
+    (
+    HWND value_handle,
+    UINT unsignedInteger__Message,
+    WPARAM value_wideParameter,
+    LPARAM value_longParameter
+    );
 
-    LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    static WNDCLASS WindowClassGetter(HINSTANCE value_handleInstance);
+
+    static HWND WindowHandleGetter(HINSTANCE value_handleInstance);
+
+    static void WindowMessageLoop();
 
     int __stdcall WINAPI WinMain
     (
-    _In_ HINSTANCE ITEM_handleInstance,
-    _In_opt_ HINSTANCE ENTRY_handleInstance,
+    _In_ HINSTANCE item_handleInstance,
+    _In_opt_ HINSTANCE entry_handleInstance,
     _In_ LPSTR longPointer__CommandLine,
     _In_ int integer__CommandShow
     )
     {
-        int* resultLRESULT = nullptr;
+        int* resultLRESULT = nullptr;   
     
-        LPCWSTR itemLPCWSTR, entryLPCWSTR;
+        ClassNameElement = L"MyWindowClass";
 
-        itemLPCWSTR = L"MyWindowClass";
-
-        entryLPCWSTR = L"My Program";
-
-        WNDCLASS valueWndclass;
+        WNDCLASS valueWindowClas;
     
-        valueWndclass = { 0 };
+        valueWindowClas = WindowClassGetter(item_handleInstance);
 
-        valueWndclass.lpfnWndProc = WindowProc;
-
-        valueWndclass.hInstance = ITEM_handleInstance;
-
-        valueWndclass.lpszClassName = itemLPCWSTR;
-
-        RegisterClass(&valueWndclass);
+        RegisterClass(&valueWindowClas);
 
         HWND valueHandle;
-
-        valueHandle = CreateWindowEx
-    (
-    0,                         
-    itemLPCWSTR,
-    entryLPCWSTR,                   
-    WS_OVERLAPPEDWINDOW,           
-    CW_USEDEFAULT, CW_USEDEFAULT,  
-    800, 600,                     
-    NULL,                           
-    NULL,                           
-    ITEM_handleInstance,                   
-    NULL        
-    );
+   
+        valueHandle = WindowHandleGetter(item_handleInstance);   
 
         ShowWindow(valueHandle, integer__CommandShow);
 
         UpdateWindow(valueHandle);
 
-        MSG msg;
-
-        while (GetMessage(&msg, NULL, 0, 0))
-        {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
-        }
-
-        return msg.wParam;
-
-        cout << "Hello World" << endl;
+        WindowMessageLoop();
 
         int valueLRESULT;
 
@@ -78,17 +56,87 @@
         return *resultLRESULT;
     }
 
-    LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+    LRESULT CALLBACK WindowProc(HWND value_handle, UINT unsignedInteger__Message, WPARAM value_wideParameter, LPARAM value_longParameter)
     {
-        switch (uMsg)
+        switch (unsignedInteger__Message)
         {
             case WM_DESTROY:
                 PostQuitMessage(0);
                 break;
 
             default:
-                return DefWindowProc(hwnd, uMsg, wParam, lParam);
+                return DefWindowProc(value_handle, unsignedInteger__Message, value_wideParameter, value_longParameter);
         }
 
         return 0;
+    }
+
+    WNDCLASS WindowClassGetter(HINSTANCE value_handleInstance)
+    {
+        WNDCLASS* resultWNDCLASS = nullptr;
+
+        WNDCLASS valueWNDCLASS;
+
+        valueWNDCLASS = { 0 };
+
+        valueWNDCLASS.lpfnWndProc = WindowProc;
+
+        valueWNDCLASS.hInstance = value_handleInstance;
+
+        valueWNDCLASS.lpszClassName = ClassNameElement;
+
+        resultWNDCLASS = &valueWNDCLASS;
+
+        return *resultWNDCLASS;
+    }
+
+    HWND WindowHandleGetter(HINSTANCE value_handleInstance)
+    {
+        HWND* resultHandle = nullptr;
+
+        HWND valueHandle;
+
+        valueHandle = CreateWindowEx
+    (
+    0,
+    ClassNameElement,
+    L"C/C++ Main Graphics User Interface",
+    WS_OVERLAPPEDWINDOW,
+    CW_USEDEFAULT, CW_USEDEFAULT,
+    800, 600,
+    NULL,
+    NULL,
+    value_handleInstance,
+    NULL
+    );
+        resultHandle = &valueHandle;
+
+        return *resultHandle;
+    }
+
+    void WindowMessageLoop()
+    {
+        MSG valueMessage;
+
+        while (true)
+        {
+            bool isEqualAbcdCheck, shouldBreakAbcdCheck;
+
+            isEqualAbcdCheck = GetMessage(&valueMessage, NULL, 0, 0) == true;
+
+            shouldBreakAbcdCheck = isEqualAbcdCheck == false;
+
+            if (shouldBreakAbcdCheck == true) 
+            {
+                break;
+            }
+
+            TranslateMessage(&valueMessage);
+
+            DispatchMessage(&valueMessage);
+
+            continue;
+        }
+
+        return;
     }
