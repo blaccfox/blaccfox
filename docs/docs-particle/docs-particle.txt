@@ -3,6 +3,8 @@
 
 	ば	Hypothetical Condition
 
+	れば	Hypothetical Condition Formal
+
 	ろ	Imperative Command
 
 	よ	Polite Speech
