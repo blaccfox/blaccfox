@@ -4,3 +4,5 @@
 	ば	Hypothetical Condition
 
 	ろ	Imperative Command
+
+	よ	Polite Speech
