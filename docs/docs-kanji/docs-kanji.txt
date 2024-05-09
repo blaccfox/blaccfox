@@ -20,3 +20,9 @@
 	九
 
 	十
+
+	Counter
+
+	Prefix
+
+	Suffix
