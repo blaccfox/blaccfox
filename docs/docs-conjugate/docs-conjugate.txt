@@ -9,11 +9,15 @@
 
 		彼ら　を　すろ　。
 
-		Formal Classical Conjugation
+		Formal Conjugation
 
 		彼　を　します　。
 
 		彼女　を　しません　。
+
+		Perfective Conjugation
+
+		Conjunctive Conjugation 
 
 		Hypothetical Conjugation Plain
 
