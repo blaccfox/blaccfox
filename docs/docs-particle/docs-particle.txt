@@ -1,10 +1,20 @@
 
-	は	Natural Continuation
+	Natural Continuation
 
-	ば	Hypothetical Condition
+		は
 
-	れば	Hypothetical Condition Formal
+	Imperative Command
 
-	ろ	Imperative Command
+		ろ
 
-	よ	Polite Speech
+	Polite Speech
+
+		よ
+
+	Hypothetical Condition 
+
+		れば　
+
+		ば
+
+		なら
