@@ -2,3 +2,5 @@
 	は	Natural Continuation
 
 	ば	Hypothetical Condition
+
+	ろ	Imperative Command
