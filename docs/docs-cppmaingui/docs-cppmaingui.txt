@@ -1,0 +1,94 @@
+
+    #pragma comment (lib, "User32.lib")
+
+    #include <Windows.h>
+
+    #include <iostream>
+
+    using namespace std;
+
+    LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+
+    int __stdcall WINAPI WinMain
+    (
+    _In_ HINSTANCE ITEM_handleInstance,
+    _In_opt_ HINSTANCE ENTRY_handleInstance,
+    _In_ LPSTR longPointer__CommandLine,
+    _In_ int integer__CommandShow
+    )
+    {
+        int* resultLRESULT = nullptr;
+    
+        LPCWSTR itemLPCWSTR, entryLPCWSTR;
+
+        itemLPCWSTR = L"MyWindowClass";
+
+        entryLPCWSTR = L"My Program";
+
+        WNDCLASS valueWndclass;
+    
+        valueWndclass = { 0 };
+
+        valueWndclass.lpfnWndProc = WindowProc;
+
+        valueWndclass.hInstance = ITEM_handleInstance;
+
+        valueWndclass.lpszClassName = itemLPCWSTR;
+
+        RegisterClass(&valueWndclass);
+
+        HWND valueHandle;
+
+        valueHandle = CreateWindowEx
+    (
+    0,                         
+    itemLPCWSTR,
+    entryLPCWSTR,                   
+    WS_OVERLAPPEDWINDOW,           
+    CW_USEDEFAULT, CW_USEDEFAULT,  
+    800, 600,                     
+    NULL,                           
+    NULL,                           
+    ITEM_handleInstance,                   
+    NULL        
+    );
+
+        ShowWindow(valueHandle, integer__CommandShow);
+
+        UpdateWindow(valueHandle);
+
+        MSG msg;
+
+        while (GetMessage(&msg, NULL, 0, 0))
+        {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+        }
+
+        return msg.wParam;
+
+        cout << "Hello World" << endl;
+
+        int valueLRESULT;
+
+        valueLRESULT = 0;
+
+        resultLRESULT = &valueLRESULT;
+
+        return *resultLRESULT;
+    }
+
+    LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+    {
+        switch (uMsg)
+        {
+            case WM_DESTROY:
+                PostQuitMessage(0);
+                break;
+
+            default:
+                return DefWindowProc(hwnd, uMsg, wParam, lParam);
+        }
+
+        return 0;
+    }
